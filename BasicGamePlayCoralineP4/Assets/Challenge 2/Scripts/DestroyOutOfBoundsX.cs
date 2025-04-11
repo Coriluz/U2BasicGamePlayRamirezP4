@@ -18,7 +18,7 @@ public class DestroyOutOfBoundsX : MonoBehaviour
         } 
        void OnTriggerEnter(Collider other) 
         {
-            if (other.gameObject == ground)
+            if (other != null && other.gameObject)
             {
                 Destroy(gameObject);
             }
